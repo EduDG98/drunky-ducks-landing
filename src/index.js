@@ -12,30 +12,46 @@ window.onload = () => {
  */
 function scrollWindow(e) {
   const actualElement = document.getElementsByClassName("focus")[0]; // retrieve the current focus item
+  const totalSections = document.getElementsByClassName("section").length;
   let id = parseInt(actualElement.id);
 
-  if (e.target.classList.contains("next")) {
-    id++;
+  e.target.classList.contains("next") ? ++id : --id; // if the event element has "next" in its class increment id, otherwise decrement the id
+
+  if (id === 1) {
+    changeVisibilityComponent({
+      className: "previous",
+      value: "hidden"
+    });
+  } else if (id > 1 && id < totalSections) {
+    changeVisibilityComponent({
+      className: "previous",
+    }, {
+      className: "next",
+    });
   } else {
-    id--;
+    changeVisibilityComponent({
+      className: "next",
+      value: "hidden"
+    });
   }
 
   const newFocus = document.getElementById(id);
+
   newFocus.scrollIntoView({
     behavior: "smooth"
   });
+
   changeFocusElement(actualElement, newFocus);
 }
 
-/**
- * "When the user presses the left or right arrow key, change the focus element to the previous or next
- * element in the list."
- *
- * Now, let's add the event listener to the `<ul>` element
- * @param beforeElem - The element that currently has the focus.
- * @param afterElem - The element that will be focused after the function is called.
- */
 function changeFocusElement(beforeElem, afterElem) {
   beforeElem.classList.remove("focus");
   afterElem.classList.add("focus");
+}
+
+function changeVisibilityComponent(...args) {
+  for (const arg of args) {
+    arg.value = arg.value || "visible";
+    document.getElementsByClassName(arg.className)[0].style.visibility = arg.value;
+  }
 }
