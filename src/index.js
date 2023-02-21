@@ -1,9 +1,11 @@
-window.onload = () => {
-  const scrollButtons = document.getElementsByClassName("button");
-  for (let i = 0; i < scrollButtons.length; i++) {
-    scrollButtons[i].addEventListener("click", scrollWindow); // listen the click event of all button classes
-  }
-};
+import { obtainRandomPhrase } from "./title-section.js"
+
+const scrollButtons = document.getElementsByClassName("button");
+for (let i = 0; i < scrollButtons.length; i++) {
+  scrollButtons[i].addEventListener("click", scrollWindow); // listen the click event of all button classes
+}
+
+obtainRandomPhrase()
 
 /**
  * It retrieves the current focus item, then scrolls to the next or previous item depending on the
@@ -14,6 +16,7 @@ function scrollWindow(e) {
   const actualElement = document.getElementsByClassName("focus")[0]; // retrieve the current focus item
   const totalSections = document.getElementsByClassName("section").length;
   let id = parseInt(actualElement.id);
+  
 
   e.target.classList.contains("next") ? ++id : --id; // if the event element has "next" in its class increment id, otherwise decrement the id
 

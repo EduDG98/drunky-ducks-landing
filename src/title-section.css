@@ -1,0 +1,32 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title-container {
+  height: 400px;
+  width: 700px;
+  background-image: url("duck-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.welcome-container {
+  border: 1px solid red;
+  height: 200px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quotes-container {
+  border: 1px solid red;
+  height: 100px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
