@@ -17,6 +17,44 @@ body {
   position: relative;
 }
 
+.navbar {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+}
+
+nav {
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: #3ead47;
+}
+
+.contenido {
+  padding-top: 80px;
+}
+
 .title {
   background: rgb(253 125 125);
 }
