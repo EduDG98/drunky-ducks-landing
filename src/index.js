@@ -1,57 +1,25 @@
-window.onload = () => {
-  const scrollButtons = document.getElementsByClassName("button");
-  for (let i = 0; i < scrollButtons.length; i++) {
-    scrollButtons[i].addEventListener("click", scrollWindow); // listen the click event of all button classes
-  }
-};
+let quotesArray = [
+    'Después de tragos y fiesta, mira bien con quien te acuestas.',
+    'El borracho valiente, se pasa del vino al aguardiente.',
+    'Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una'
+]
 
-/**
- * It retrieves the current focus item, then scrolls to the next or previous item depending on the
- * button clicked
- * @param e - the event object
- */
-function scrollWindow(e) {
-  const actualElement = document.getElementsByClassName("focus")[0]; // retrieve the current focus item
-  const totalSections = document.getElementsByClassName("section").length;
-  let id = parseInt(actualElement.id);
+let phraseContainer = document.getElementsByClassName('random-quotes')[0]
 
-  e.target.classList.contains("next") ? ++id : --id; // if the event element has "next" in its class increment id, otherwise decrement the id
+phraseContainer.innerHTML = quotesArray[Math.floor(Math.random()*quotesArray.length)];
 
-  if (id === 1) {
-    changeVisibilityComponent({
-      className: "previous",
-      value: "hidden"
-    });
-  } else if (id > 1 && id < totalSections) {
-    changeVisibilityComponent({
-      className: "previous",
-    }, {
-      className: "next",
-    });
-  } else {
-    changeVisibilityComponent({
-      className: "next",
-      value: "hidden"
-    });
-  }
 
-  const newFocus = document.getElementById(id);
+let buttons = document.querySelectorAll('.button')
 
-  newFocus.scrollIntoView({
-    behavior: "smooth"
-  });
+for (let button of buttons) {
+    button.addEventListener('click', (event) => {
+        let choose = event.target.classList[1]
+        let modal = document.querySelector('.modal')
 
-  changeFocusElement(actualElement, newFocus);
-}
-
-function changeFocusElement(beforeElem, afterElem) {
-  beforeElem.classList.remove("focus");
-  afterElem.classList.add("focus");
-}
-
-function changeVisibilityComponent(...args) {
-  for (const arg of args) {
-    arg.value = arg.value || "visible";
-    document.getElementsByClassName(arg.className)[0].style.visibility = arg.value;
-  }
+        if (choose === 'overage') {
+            modal.style.display = 'none'
+        } else {
+            location.replace('https://www.google.com/')
+        }
+    })
 }
