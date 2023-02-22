@@ -1,0 +1,53 @@
+{
+    "drinks": [
+        {
+            "strDrink": "Aquamarine",
+            "strAlcoholic": "Alcoholic",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg",
+            "strIngredients": ["Hpnotiq", "Pineapple Juice", "Banana Liqueur"],
+            "strMeasures": ["2 oz", "1 oz", "1 oz"]
+        },{
+          "strDrink": "Orangeade",
+          "strAlcoholic": "Non alcoholic",
+          "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/ytsxxw1441167732.jpg",
+          "strIngredients": ["Lemon juice", "Orange juice", "Sugar syrup", "Soda water"],
+          "strMeasures": ["5 cl ", "15 cl", "2-3 cl "]
+        },{
+          "strDrink": "French Negroni",
+          "strAlcoholic": "Alcoholic",
+          "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/x8lhp41513703167.jpg",
+          "strIngredients": ["Gin", "Lillet", "Sweet Vermouth", "Orange Peel"],
+          "strMeasures": ["1 oz", "1 oz","1 oz", "1"]
+        },{
+            "strDrink": "Hot Toddy",
+            "strAlcoholic": "Alcoholic",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/ggx0lv1613942306.jpg",
+            "strIngredients": ["Whyskey", "Honey", "Cinnamon", "Lemon", "Cloves"],
+            "strMeasures": ["50 ml", "15 ml", "1", "1", "2"]
+        },{
+            "strDrink": "Zenmeister",
+            "strAlcoholic": "Alcoholic",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/qyuvsu1479209462.jpg",
+            "strIngredients": ["Jägermeister", "Root beer"],
+            "strMeasures": ["1/2 oz ", "1/2 oz "]
+        },{
+            "strDrink": "Bramble",
+            "strAlcoholic": "Alcoholic",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/twtbh51630406392.jpg",
+            "strIngredients": ["Gin", "Lemon juice", "Sugar syrup", "Creme de Mure"],
+            "strMeasures": ["4 cl", "1.5 ml", "1 cl", "1.5 cl"]
+        },{
+            "strCategory": "Ordinary Drink",
+            "strAlcoholic": "Alcoholic",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/rpsrqv1468923507.jpg",
+            "strIngredients": ["Gin", "Maraschino liqueur", "Orange bitters"],
+            "strMeasures": ["1 1/2 oz ", "1/2 oz ", "2 dashes "]
+        },{
+            "strDrink": "AT&T",
+            "strAlcoholic": "Alcoholic",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/ggx0lv1613942306.jpg",
+            "strIngredients": ["Absolut Vodka", "Gin", "Tonic water"],
+            "strMeasures": ["1 oz", "1 oz", "4 oz"]
+        }
+    ]
+} 
