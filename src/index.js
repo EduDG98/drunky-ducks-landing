@@ -14,7 +14,6 @@ const quotesArray = [
 const phraseContainer = document.getElementsByClassName("random-quotes")[0];
 
 phraseContainer.innerHTML = quotesArray[Math.floor(Math.random() * quotesArray.length)];
-
 const buttons = document.querySelectorAll(".button");
 
 for (const button of buttons) {
