@@ -1,10 +1,12 @@
 import getAllCocktails from "./js/cocktails";
+
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+/*    Introduce random quote in hero page   */
 const quotesArray = [
   "Después de tragos y fiesta, mira bien con quien te acuestas.",
   "El borracho valiente, se pasa del vino al aguardiente.",
@@ -29,10 +31,63 @@ for (const button of buttons) {
   });
 }
 
-/*    Introduce JSON data in carrousel */
-const datos = await getAllCocktails();
+/*    Introduce JSON data cocktails in carrousel */
+const cocktails = await getAllCocktails();
 
-console.log(datos);
+for (const cocktail of cocktails.drinks) {
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+  //  Slider
+  const swiperSlide = document.createElement("div");
+  swiperSlide.classList.add("swiper-slide");
+
+  // Content container
+  const swiperSlideContent = document.createElement("div");
+  swiperSlideContent.classList.add("swiper-slide-content");
+
+  //  Image div
+  const imageCocktail = document.createElement("img");
+  imageCocktail.classList.add("cocktail-img");
+  imageCocktail.src = cocktail.strDrinkThumb;
+
+  //  Details div
+  const detailCocktail = document.createElement("div");
+  detailCocktail.classList.add("details-cocktail");
+
+  const cocktailName = document.createElement("h1");
+  cocktailName.textContent = cocktail.strDrink;
+
+  const cocktailCategory = document.createElement("h3");
+  cocktailCategory.textContent = cocktail.strAlcoholic;
+
+  const cocktailIngredients = document.createElement("ul");
+
+  for (const props in cocktail.strIngredients) {
+    const ingredient = document.createElement("li");
+
+    if (cocktail.strMeasures[props]) {
+      ingredient.textContent = `${cocktail.strIngredients[props]} - ${cocktail.strMeasures[props]}`;
+    } else {
+      ingredient.textContent = cocktail.strIngredients[props];
+    }
+
+    cocktailIngredients.appendChild(ingredient);
+  }
+
+  detailCocktail.appendChild(cocktailName);
+  detailCocktail.appendChild(cocktailCategory);
+  detailCocktail.appendChild(cocktailIngredients);
+
+  // Introduce elements in slider
+  swiperSlideContent.appendChild(detailCocktail);
+  swiperSlideContent.appendChild(imageCocktail);
+
+  //  Introduce content in slide
+  swiperSlide.appendChild(swiperSlideContent);
+
+  // Introduce slide in wrapper
+  swiperWrapper.appendChild(swiperSlide);
+}
 
 /*    Function Swiper   */
 const swiper = new Swiper(".swiper", {
@@ -62,3 +117,5 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
+
+swiper.on();
