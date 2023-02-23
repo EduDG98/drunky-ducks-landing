@@ -31,22 +31,17 @@ body {
   background: #444;
 }
 
-.wrapper {
-  height: 100vh;
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-}
-
 /*    Modal   */
 .modal {
-  position: absolute;
+  position: fixed;
+  top: 0;
   display: grid;
   place-content: center;
   width: 100%;
   height: 100%;
   background: rgb(255 255 255 / 18%);
   backdrop-filter: blur(8px);
-  z-index: 1;
+  z-index: 2;
 }
 
 .line-hr {
@@ -98,6 +93,7 @@ main {
 
 .section {
   width: 100%;
+  height: 100vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -238,6 +234,7 @@ nav ul li:hover {
 
 /*    Cocktail Section    */
 .cocktails {
+  height: 90vh;
 }
 
 /*    Swiper    */
@@ -257,34 +254,39 @@ nav ul li:hover {
   list-style: none;
 }
 
+.swiper-scrollbar {
+  margin-top: 3em;
+}
+
 .cocktail-img {
   width: 400px;
-  height: 450px;
+  height: 500px;
   background-size: contain;
   background-position: center;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px #585858;
+  margin-bottom: 1em;
 }
 
 footer {
-  height: 20%;
+  height: 10vh;
   width: 100%;
-  background-color: palevioletred;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-content: center;
+  font-size: 1em;
 }
 
 .social-container {
-  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border: 2px solid red;
 }
 
 .icon-container {
-  width: 80%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
   align-items: center;
 }
 
@@ -294,19 +296,8 @@ footer {
 }
 
 .contact-container {
-  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border: 2px solid red;
-}
-
-.logo-footer-container {
-  width: 20%;
-  border: 2px solid red;
-  background: url("duck.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
