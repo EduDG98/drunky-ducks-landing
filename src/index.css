@@ -1,3 +1,8 @@
+:root {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +13,9 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background: linear-gradient(135deg, #184e68 0%, #57ca85 100%);
+  scrollbar-width: 14px;
+  scrollbar-color: #444 #ffffff6f;
 }
 
 /*    Scrollbar   */
@@ -15,9 +23,12 @@ body {
   width: 14px;
 }
 
+::-webkit-scrollbar-track {
+  background: #ffffff6f;
+}
+
 ::-webkit-scrollbar-thumb {
-  border-radius: 40px;
-  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background: #444;
 }
 
 .wrapper {
@@ -39,9 +50,23 @@ body {
 }
 
 .line-hr {
-  background: red;
+  background: rgb(255 255 255);
   width: 80%;
   height: 2px;
+}
+
+.modal h1 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+
+.modal h2 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
 .modal .container {
@@ -53,15 +78,30 @@ body {
   text-align: center;
 }
 
+.overage,
+.underage {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /*    Section   */
 .section {
   width: 100%;
   height: 100%;
   scroll-snap-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
+  overflow: auto;
 }
 
 /*    Title Section   */
@@ -102,42 +142,90 @@ body {
 
 /*    Preview Section   */
 .preview {
-  background: rgb(160 160 255);
   display: flex;
-  border: 1px solid black;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.logo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 5px solid red;
-}
-
 .text {
-  width: 600px;
-  height: 200px;
-  border: 1px solid blueviolet;
+  color: black;
+  border: 1px solid black;
+  padding: 25px;
+  margin-top: 10px;
 }
 
 .tags {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  color: black;
 }
 
 .tag {
-  height: 120px;
-  width: 80px;
-  border: 1px solid darkred;
+  height: 420px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #ffffff6b;
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+  margin-bottom: 14px;
+}
+
+.tag h2 {
+  margin-top: 15px;
+  color: black;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.tag p {
+  font-size: 18px;
+  padding: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 18px;
+}
+
+.tag img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  filter: grayscale(1);
+  transition: 0.4s;
+}
+
+.tag:hover img {
+  filter: grayscale(0);
 }
 
 /*    Cocktail Section    */
 .cocktails {
-  background: rgb(255 253 160);
+}
+
+/*    Swiper    */
+.carrousel {
+  width: 100%;
+}
+
+.swiper-slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper-slide-content ul {
+  list-style: none;
+}
+
+.cocktail-img {
+  width: 400px;
+  height: 450px;
+  background-size: contain;
+  background-position: center;
 }
 
 footer {

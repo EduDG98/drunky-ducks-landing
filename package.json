@@ -30,6 +30,9 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "swiper": "^9.0.5"
+  },
+  "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0"
   }
 }
