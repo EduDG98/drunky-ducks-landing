@@ -1,15 +1,15 @@
 import getAllCocktails from "./js/cocktails";
-let quotesArray = [
-  '"Después de tragos y fiesta, mira bien con quien te acuestas." Anónimo',
-  '"Bebo para olvidar que soy un borracho.” Antonine de Saint-Exupery',
-  '"Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una". Tom Waits',
-];
 
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+const quotesArray = [
+  "\"Después de tragos y fiesta, mira bien con quien te acuestas.\" Anónimo",
+  "\"Bebo para olvidar que soy un borracho.” Antonine de Saint-Exupery",
+  "\"Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una\". Tom Waits",
+];
 
 const phraseContainer = document.getElementsByClassName("random-quotes")[0];
 
@@ -123,6 +123,6 @@ const btnE1 = document.getElementById("btn");
 btnE1.addEventListener("mouseover", (event) => {
   const x = event.pageX - btnE1.offsetLeft;
   const y = event.pageY - btnE1.offsetTop;
-  btnE1.style.setProperty("--xPos", x + "px");
-  btnE1.style.setProperty("--yPos", y + "px");
+  btnE1.style.setProperty("--x-pos", x + "px");
+  btnE1.style.setProperty("--y-pos", y + "px");
 });
