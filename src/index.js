@@ -96,10 +96,10 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
   centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
