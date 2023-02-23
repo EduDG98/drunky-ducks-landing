@@ -1,8 +1,8 @@
 let quotesArray = [
-    'Después de tragos y fiesta, mira bien con quien te acuestas.',
-    'El borracho valiente, se pasa del vino al aguardiente.',
-    'Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una'
-]
+  '"Después de tragos y fiesta, mira bien con quien te acuestas." Anónimo',
+  '"Bebo para olvidar que soy un borracho.” Antonine de Saint-Exupery',
+  '"Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una". Tom Waits',
+];
 
 let phraseContainer = document.getElementsByClassName('random-quotes')[0]
 
@@ -23,3 +23,10 @@ for (let button of buttons) {
         }
     })
 }
+const btnE1 = document.getElementById("btn");
+btnE1.addEventListener("mouseover", (event)=> {
+    const x = event.pageX - btnE1.offsetLeft;
+    const y = event.pageY - btnE1.offsetTop;
+    btnE1.style.setProperty ("--xPos", x + "px");
+    btnE1.style.setProperty ("--yPos", y + "px");
+})
