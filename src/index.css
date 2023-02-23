@@ -107,20 +107,18 @@ main {
 }
 
 .navbar {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  position: fixed;
-  z-index: 100;
-}
-
-nav {
-  float: left;
+  width: 100%;
+  height: 8%;
+  background: #ffffff6b;
+  position: sticky;
+  z-index: 1;
 }
 
 nav ul {
   list-style: none;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 nav ul li {
@@ -134,16 +132,19 @@ nav ul li a {
   padding: 20px;
   color: #45b39d;
   text-decoration: none;
+  font: bold;
 }
 
 nav ul li:hover {
-  background: #e2c017;
+  background: #e2c01774;
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 /*    Title Section   */
 .title {
-  min-height: 100vh;
-  background: rgb(253 125 125);
+  height: 92%;
+  background-image: url("title.webp");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,12 +152,29 @@ nav ul li:hover {
   font-size: 1em;
 }
 
+.title-content {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+}
+
 .title-container {
-  height: 400px;
-  width: 400px;
-  background-image: url("drunky-ducks-logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  height: 15em;
+  width: 30em;
+}
+
+.title-container img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(3px 0px 43px #ffffff);
 }
 
 .welcome-container {
@@ -169,12 +187,49 @@ nav ul li:hover {
 }
 
 .quotes-container {
-  border: 1px solid red;
   height: 100px;
   width: 80vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-style: oblique;
+  font-size: 1.5em;
+}
+
+.btn {
+  padding: 20px 40px;
+  text-decoration: none;
+  background-color: #ffc300;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: #45b39d;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  top: var(--yPos);
+  left: var(--xPos);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
 /*    Preview Section   */
