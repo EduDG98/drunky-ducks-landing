@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: DuruSans;
-  src: url("fonts/DuruSans-Regular.ttf");
+  src: url("./assets/fonts/DuruSans-Regular.ttf");
 }
 
 * {
@@ -167,7 +167,7 @@ nav ul li:hover a {
 
 /*    Title Section   */
 .title {
-  background-image: url("title.webp");
+  background-image: url("./assets/img/title.webp");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

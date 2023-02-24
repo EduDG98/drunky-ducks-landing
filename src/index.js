@@ -31,7 +31,7 @@ for (const button of buttons) {
 }
 
 /*    Introduce JSON data cocktails in carrousel */
-const cocktails = await getAllCocktails();
+const cocktails = async() => await getAllCocktails();
 
 for (const cocktail of cocktails.drinks) {
   const swiperWrapper = document.querySelector(".swiper-wrapper");
