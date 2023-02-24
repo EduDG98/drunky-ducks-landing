@@ -6,9 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 const quotesArray = [
-  "\"Después de tragos y fiesta, mira bien con quien te acuestas.\" Anónimo",
-  "\"Bebo para olvidar que soy un borracho.” Antonine de Saint-Exupery",
-  "\"Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una\". Tom Waits",
+  "\"Después de tragos y fiesta, mira bien con quien te acuestas.\" <br>Anónimo",
+  "\"Bebo para olvidar que soy un borracho.” <br>Antonine de Saint-Exupery",
+  "\"Yo no tengo problemas con la bebida, excepto cuando no puedo servirme una\". <br>Tom Waits",
 ];
 
 const phraseContainer = document.getElementsByClassName("random-quotes")[0];
@@ -100,10 +100,10 @@ const swiper = new Swiper(".swiper", {
     disableOnInteraction: false,
   },
   // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
 
   // Navigation arrows
   navigation: {
